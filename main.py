@@ -1,5 +1,5 @@
 from expense import add_expense
-from storage import view_expenses, search_expense
+from storage import view_expenses, search_expense, calculate_total_expense
 
 while True:
 
@@ -31,7 +31,7 @@ while True:
         print("Step 2: Search function completed")
 
     elif choice == "4":
-        print("Calculate Total Expense")
+        calculate_total_expense()
 
     elif choice== "5":
         print("Monthly Summary")

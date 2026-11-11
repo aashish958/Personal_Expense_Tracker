@@ -78,4 +78,30 @@ def search_expense():
 
     if not found:
         print("No expenses found in this category!")
+
+
+
+def calculate_total_expense():
+    total= 0
+    if not CSV_FILE.exists() or CSV_FILE.stat().st_size == 0:
+        print("No expenses found")
+        return
+    
+    
+    with open(CSV_FILE,"r", newline="", encoding="utf-8") as file:
+    
+        reader = csv.DictReader(file)
+        
+        for expense in reader:
+            total = total + float(expense["amount"])
+
+
+    print("===============================")
+    print("      TOTAL EXPENSE")
+    print("===============================")
+                
+    print(f"Total Expense: ₹{total:.2f}")
+    
+
+
         
