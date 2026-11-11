@@ -17,29 +17,35 @@ while True:
     print("7. Exit")
     print("---------------------------")
 
-    choice = input("Enter your choice: ")
+    
+    try:
+        choice = int(input("Enter your choice: "))
 
-    if choice == "1":
+    except ValueError:
+        print("Inavlid input! Please enter a number.")
+        continue
+
+    if choice == 1:
         add_expense()
     
-    elif choice == "2":
+    elif choice == 2:
         view_expenses()
     
-    elif choice == "3":
+    elif choice == 3:
         print("Step 1: Search option selected")
         search_expense()
         print("Step 2: Search function completed")
 
-    elif choice == "4":
+    elif choice == 4:
         calculate_total_expense()
 
-    elif choice== "5":
+    elif choice== 5:
         print("Monthly Summary")
 
-    elif choice == "6":
+    elif choice == 6:
         print("Delete Expense")
 
-    elif choice== "7":
+    elif choice== 7:
         print("Thank you!!")
         break
     else:
