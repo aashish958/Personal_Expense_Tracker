@@ -1,0 +1,6 @@
+title,amount,category,date
+Laptop,45000,Electronics,2026-11-10
+Food,abc,Food,2026-11-11
+Travel,500,,2026-11-12
+Shopping,200,Clothes,invalid-date
+Extra,100,Food,2026-11-13,Unexpected
