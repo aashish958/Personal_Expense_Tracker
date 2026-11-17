@@ -1,5 +1,12 @@
 from expense import add_expense
-from storage import view_expenses, search_expense, calculate_total_expense
+from storage import (
+    view_expenses,
+    search_expense,
+    calculate_total_expense,
+    monthly_summary,
+    delete_expense,
+    validate_expense_data
+)
 
 while True:
 
@@ -14,7 +21,8 @@ while True:
     print("4. Calculate Total Expense")
     print("5. Monthly Summary")
     print("6. Delete Expense")
-    print("7. Exit")
+    print("7. Validate Expense Data")
+    print("8. Exit")
     print("---------------------------")
 
     
@@ -22,7 +30,7 @@ while True:
         choice = int(input("Enter your choice: "))
 
     except ValueError:
-        print("Inavlid input! Please enter a number.")
+        print("Invalid input! Please enter a number between 1 and 8.")
         continue
 
     if choice == 1:
@@ -40,13 +48,15 @@ while True:
         calculate_total_expense()
 
     elif choice== 5:
-        print("Monthly Summary")
+        monthly_summary()
 
     elif choice == 6:
-        print("Delete Expense")
+        delete_expense()
 
     elif choice== 7:
+        validate_expense_data()
+
+    elif choice == 8:
         print("Thank you!!")
         break
-    else:
-        print("Invalid choice!!")
+    
