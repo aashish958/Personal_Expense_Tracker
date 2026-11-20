@@ -53,6 +53,3 @@ def add_expense():
     
     # Save expense in CSV file
     save_expense(expense)
-    
-    print("\nExpense added successfully!")
-    print(expense)

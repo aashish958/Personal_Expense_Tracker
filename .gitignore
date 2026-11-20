@@ -9,3 +9,6 @@ expenses.csv
 # Virtual environments
 venv/
 .venv/
+
+#Windows file
+desktop.ini
